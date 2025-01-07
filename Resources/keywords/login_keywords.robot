@@ -10,13 +10,13 @@ Gerar Fakers
     # Gerar Dados Aleatórios para cadastro
     ${nome} =        Gerar Nome
     ${senha} =       Gerar Senha
-    ${letraNumero} =       Gerar Letra Ou Numero
+    ${letra} =       Gerar Letra
 
 
     # Armazenar os dados nas variáveis globais
     Set Suite Variable    ${USERNAME}            ${nome}
     Set Suite Variable    ${PASSWORD}       ${senha}
-    Set Suite Variable    ${FIRST_CARACTER}      ${letraNumero}
+    Set Suite Variable    ${FIRST_CARACTER}      ${letra}
 
 Acessar a tela de login
     Open BROWSER                                        ${URL}    ${BROWSER}

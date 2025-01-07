@@ -28,21 +28,16 @@ Cadastro do novo Admin e validar se houve sucesso.
     When Cadastrar Senha
     When Confirmar Senha
     When Salvar o cadastro
-    When Validar se Cadastro foi satisfatorio
+    Then Validar se Cadastro foi satisfatorio
 
 
 Buscar por Admin Cadastrado.
-    Skip
     Given Acessar o Menu Admin
     When Validar tela Admin/User Management
-    When Inserir o Username
-    When Selecionar o User Role Admin
-    When Inserir o Employee Name
-    When Selecionar o Status Enabled
-
+    When Pesquisar por Username
+    When Pesquisar por User Role Admin
+    When Pesquisar por Employee Name
+    When Pesquisar por Status Enabled
     When Clicar no botão Search
-
-
-
-
-
+    When Validr Filtro
+    Then Validar Username & Employee Name
