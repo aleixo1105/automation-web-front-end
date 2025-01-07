@@ -115,3 +115,7 @@ robot -d Results .\Tests\tests.robot      #Para Gerar os relatorio na pasta #No 
     When Inserir credenciais válidas
     When verificar Login Bem-Sucedido
     Then Fazer logout
+
+![Screenshot 2025-01-07 193611.png](..%2F..%2FUsers%2Faleix%2FPictures%2FScreenshots%2FScreenshot%202025-01-07%20193611.png)
+
+[Results.zip](..%2F..%2FUsers%2Faleix%2FOneDrive%2F%C3%81rea%20de%20Trabalho%2FResults.zip)
