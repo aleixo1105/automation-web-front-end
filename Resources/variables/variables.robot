@@ -5,3 +5,6 @@ ${BROWSER}                  chrome
 
 ${USERNAME_ADMIN}           Admin
 ${PASSWORD_ADMIN}           admin123
+
+${NEW_USERNAME}                   ${EMPTY}
+${NEW_EMPLOYEE_NAME}              ${EMPTY}

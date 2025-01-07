@@ -1,4 +1,5 @@
 .idea
 venv
 Resultados
-resultados
+Results
+__pycache__/
