@@ -116,6 +116,6 @@ robot -d Results .\Tests\tests.robot      #Para Gerar os relatorio na pasta #No 
     When verificar Login Bem-Sucedido
     Then Fazer logout
 
-![Screenshot 2025-01-07 193611.png](..%2F..%2FUsers%2Faleix%2FPictures%2FScreenshots%2FScreenshot%202025-01-07%20193611.png)
+![Screenshot 2025-01-07 193611](https://github.com/user-attachments/assets/fa4344b8-5e85-4f27-8d69-1adece8523db)
+[Results.zip](https://github.com/user-attachments/files/18339727/Results.zip)
 
-[Results.zip](..%2F..%2FUsers%2Faleix%2FOneDrive%2F%C3%81rea%20de%20Trabalho%2FResults.zip)
