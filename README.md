@@ -6,6 +6,7 @@ Este projeto utiliza o **Robot Framework** com a biblioteca **Faker** para gerar
 ## Estrutura do Projeto
 O projeto segue uma estrutura baseada em Page Objects para facilitar a manutenção e reutilização de código.
 
+```
 automation-mobile-robot/
 ├── Tests/
 │   └── tests.robot
@@ -26,6 +27,7 @@ automation-mobile-robot/
 ├── Requirements.txt
 ├── .gitignore
 └── README.md
+```
 
 ### Descrição das Pastas
 
