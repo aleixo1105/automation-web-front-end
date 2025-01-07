@@ -41,3 +41,18 @@ Buscar por Admin Cadastrado.
     When Clicar no botão Search
     When Validr Filtro
     Then Validar Username & Employee Name
+
+
+Deletar Admin Cadastrado.
+    Given Acessar o Menu Admin
+    When Validar tela Admin/User Management
+    When Pesquisar por Username
+    When Pesquisar por User Role Admin
+    When Pesquisar por Employee Name
+    When Pesquisar por Status Enabled
+    When Clicar no botão Search
+    When Validr Filtro
+    When Validar Username & Employee Name
+    When Deletar User Cadastrado
+    When Confirmar Delete
+    Then Validar Notificação Após Exclusão de Usuário

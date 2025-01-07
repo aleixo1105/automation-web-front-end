@@ -57,3 +57,15 @@ Validar Username & Employee Name
     ${employee_name}=   Get Text    ${RECORD_FOUND_EMPLOYEE_NAME_XPATH}
     Should Be Equal As Strings    ${username}       ${USERNAME}
     Should Be Equal As Strings    ${employee_name}  ${EMPLOYEE_NAME}
+
+Deletar User Cadastrado
+     SeleniumLibrary.Wait Until Element Is Visible    ${DELETE_USER_ICON_XPATH}
+     SeleniumLibrary.Click Element                  ${DELETE_USER_ICON_XPATH}
+
+Confirmar Delete
+     SeleniumLibrary.Wait Until Element Is Visible    ${CONFIRM_DELETE_XPATH}
+     SeleniumLibrary.Click Element                    ${CONFIRM_DELETE_XPATH}
+
+Validar Notificação Após Exclusão de Usuário
+     SeleniumLibrary.Wait Until Element Is Visible    ${SUCCESSFULLY_DELETED_XPATH}
+     SeleniumLibrary.Click Element                    ${SUCCESSFULLY_DELETED_XPATH}
