@@ -2,44 +2,55 @@
 Library    SeleniumLibrary
 Library     ../variables/gerador.py
 Resource    ../variables/variables.robot   # Referência ao arquivo de variáveis
-Resource    ../locators/admin_management_locators.robot   # Referência ao arquivo de locators
+Resource    ../locators//admin_add_user_locators.robot   # Referência ao arquivo de locators
 
 
 *** Keywords ***
 
 # SYSTEM USER
 Validar tela Admin/Add User
-    SeleniumLibrary.Wait Until Element Is Visible           ${MENU_ADMIN}
-    SeleniumLibrary.Element Should Be Visible               ${MENU_ADMIN}
+    SeleniumLibrary.Wait Until Element Is Visible           ${MENU_ADMIN_ADD_USER}
+    SeleniumLibrary.Element Should Be Visible               ${MENU_ADMIN_ADD_USER}
 
-Inserir o Username
-    SeleniumLibrary.Input Text          ${ADMIN_FILTER_USERNAME}   ${NEW_USERNAME}
+Cadastrar o Username
 
-Selecionar o User Role ADMIN
-    SeleniumLibrary.Click Element     ${ADMIN_FILTER_USER_ROLE}
-    SeleniumLibrary.Click Element     ${ADMIN_FILTER_USER_ROLE_ADMIN}
+    SeleniumLibrary.Input Text          ${ADD_USERNAME}        ${USERNAME}
 
-Selecionar o User Role ESS
-    SeleniumLibrary.Click Element      ${ADMIN_FILTER_USER_ROLE}
-    SeleniumLibrary.Click Element      ${ADMIN_FILTER_USER_ROLE_ESS}
+Cadastrar o User Role ADMIN
+    SeleniumLibrary.Click Element     ${ADD_USER_ROLE}
+    SeleniumLibrary.Click Element     ${ADD_USER_ROLE_ADMIN}
 
-Inserir o Employee Name
-    SeleniumLibrary.Input Text         ${ADMIN_FILTER_EMPLOYEE_NAME}   ${NEW_USERNAME}
+Cadastrar o Employee Name
+    SeleniumLibrary.Input Text         ${ADD_EMPLOYEE_NAME}   ${FIRST_CARACTER}
+    Sleep  3s
+    SeleniumLibrary.Wait Until Page Contains Element       ${FIRST_SUGGESTION_EMPLOYEE_NAME}
+    ${text}    Get Text    ${FIRST_SUGGESTION_EMPLOYEE_NAME}
+    Set Suite Variable    ${EMPLOYEE_NAME}            ${text}
+    SeleniumLibrary.Click Element      ${FIRST_SUGGESTION_EMPLOYEE_NAME}
 
-Selecionar o Status Enabled
-    SeleniumLibrary.Click Element      ${ADMIN_FILTER_STATUS}
-    SeleniumLibrary.Click Element      ${ADMIN_FILTER_STATUS_ENABLED}
+Cadastrar o Status Enabled
+    SeleniumLibrary.Wait Until Element Is Visible       ${ADD_STATUS}
+    SeleniumLibrary.Click Element      ${ADD_STATUS}
+    SeleniumLibrary.Click Element      ${ADD_STATUS_ENABLED}
 
-Selecionar o Status Disabled
-    SeleniumLibrary.Click Element      ${ADMIN_FILTER_STATUS}
-    SeleniumLibrary.Click Element      ${ADMIN_FILTER_STATUS_DISABLED}
+Cadastrar o Status Disabled
+    SeleniumLibrary.Click Element      ${ADD_STATUS}
+    SeleniumLibrary.Click Element      ${ADD_STATUS_DISABLED}
 
-Clicar no botão Reset
-    SeleniumLibrary.Click Button    ${ADMIN_FILTER_RESET}
+Cadastrar Senha
+    SeleniumLibrary.Input Text         ${ADD_PASSWORD}          ${PASSWORD}
 
-Clicar no botão Search
-    SeleniumLibrary.Click Button    ${ADMIN_FILTER_SEARCH}
+Confirmar Senha
+     SeleniumLibrary.Input Text       ${ADD_CONFIRM_PASSWORD}     ${PASSWORD}
 
-Clicar no botão +Add
-    SeleniumLibrary.Click Button    ${ADMIN_ADD_USER}
+Cancelar o cadastro
+    SeleniumLibrary.Click Button        ${ADD_CANCEL}
 
+Salvar o cadastro
+    Sleep  3s
+    SeleniumLibrary.Click Button        ${ADD_SAVE}
+
+Validar se Cadastro foi satisfatorio
+    SeleniumLibrary.Wait Until Element Is Visible           ${SUCCESSFULLY_SAVED}
+    SeleniumLibrary.Element Should Be Visible               ${SUCCESSFULLY_SAVED}
+    Sleep  3s

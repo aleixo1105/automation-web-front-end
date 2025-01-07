@@ -8,13 +8,15 @@ Resource    ../locators/login_locators.robot   # Referência ao arquivo de locat
 *** Keywords ***
 Gerar Fakers
     # Gerar Dados Aleatórios para cadastro
-    ${nome}=        Gerar Nome
-    ${email}=       Gerar Email
+    ${nome} =        Gerar Nome
+    ${senha} =       Gerar Senha
+    ${letraNumero} =       Gerar Letra Ou Numero
 
 
     # Armazenar os dados nas variáveis globais
-    Set Suite Variable    ${NEW_USERNAME}           ${nome}
-    Set Suite Variable    ${NEW_EMPLOYEE_NAME}      ${email}
+    Set Suite Variable    ${USERNAME}            ${nome}
+    Set Suite Variable    ${PASSWORD}       ${senha}
+    Set Suite Variable    ${FIRST_CARACTER}      ${letraNumero}
 
 Acessar a tela de login
     Open BROWSER                                        ${URL}    ${BROWSER}
@@ -23,7 +25,7 @@ Acessar a tela de login
 
 Inserir credenciais válidas
     SeleniumLibrary.Wait Until Page Contains Element    ${LogUSERNAME}
-    SeleniumLibrary.Input Text    ${LogUSERNAME}   ${USERNAME_ADMIN}
-    SeleniumLibrary.Input Text    ${LogPASSWORD}   ${PASSWORD_ADMIN}
+    SeleniumLibrary.Input Text    ${LogUSERNAME}   ${ADMIN_USERNAME}
+    SeleniumLibrary.Input Text    ${LogPASSWORD}   ${ADMIN_PASSWORD}
     SeleniumLibrary.Click Button                        ${LogLOGIN_BUTTON}
 

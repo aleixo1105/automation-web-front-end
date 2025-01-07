@@ -12,7 +12,7 @@ Validar tela Admin/User Management
     SeleniumLibrary.Wait Until Element Is Visible           ${MENU_ADMIN}
 
 Inserir o Username
-    SeleniumLibrary.Input Text          ${ADMIN_FILTER_USERNAME}   ${NEW_USERNAME}
+    SeleniumLibrary.Input Text          ${ADMIN_FILTER_USERNAME}   ${USERNAME}
 
 Selecionar o User Role ADMIN
     SeleniumLibrary.Click Element     ${ADMIN_FILTER_USER_ROLE}
@@ -23,7 +23,7 @@ Selecionar o User Role ESS
     SeleniumLibrary.Click Element      ${ADMIN_FILTER_USER_ROLE_ESS}
 
 Inserir o Employee Name
-    SeleniumLibrary.Input Text         ${ADMIN_FILTER_EMPLOYEE_NAME}   ${NEW_USERNAME}
+    SeleniumLibrary.Input Text         ${ADMIN_FILTER_EMPLOYEE_NAME}   ${EMPLOYEE_NAME}
 
 Selecionar o Status Enabled
     SeleniumLibrary.Click Element      ${ADMIN_FILTER_STATUS}

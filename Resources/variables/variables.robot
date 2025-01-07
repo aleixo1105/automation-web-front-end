@@ -1,10 +1,12 @@
 *** Variables ***
-${NEW_COMMAND_TIMEOUT}      30000  # 30 segundos
-${URL}                      https://opensource-demo.orangehrmlive.com/
-${BROWSER}                  chrome
+${NEW_COMMAND_TIMEOUT}        30000  # 30 segundos
+${URL}                        https://opensource-demo.orangehrmlive.com/
+${BROWSER}                    chrome
 
-${USERNAME_ADMIN}           Admin
-${PASSWORD_ADMIN}           admin123
+${ADMIN_USERNAME}             Admin
+${ADMIN_PASSWORD}             admin123
 
-${NEW_USERNAME}                   ${EMPTY}
-${NEW_EMPLOYEE_NAME}              ${EMPTY}
+${USERNAME}                         ${EMPTY}
+${EMPLOYEE_NAME}                    ${EMPTY}
+${PASSWORD}                         ${EMPTY}
+${FIRST_CARACTER}                   ${EMPTY}
