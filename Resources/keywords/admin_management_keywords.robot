@@ -67,5 +67,5 @@ Confirmar Delete
      SeleniumLibrary.Click Element                    ${CONFIRM_DELETE_XPATH}
 
 Validar Notificação Após Exclusão de Usuário
-     SeleniumLibrary.Wait Until Element Is Visible    ${SUCCESSFULLY_DELETED_XPATH}
-     SeleniumLibrary.Click Element                    ${SUCCESSFULLY_DELETED_XPATH}
+    Wait Until Element Is Visible       ${SUCCESSFULLY_DELETED_TOAST_XPATH}
+    Element Text Should Be              ${SUCCESSFULLY_DELETED_TOAST_MESSAGE_XPATH}   Successfully Deleted

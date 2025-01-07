@@ -19,8 +19,10 @@ ${ADD_CONFIRM_PASSWORD_XPATH}                 //*[@id="app"]/div[1]/div[2]/div[2
 
 ${ADD_CANCEL_XPATH}                           //*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[3]/button[1]
 ${ADD_SAVE_XPATH}                             //*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[3]/button[2]
-${SUCCESSFULLY_SAVED_XPATH}                   //*[@id="oxd-toaster_1"]/div
 
+
+${SUCCESSFULLY_CREATED_TOAST_XPATH}            //div[contains(@class, 'oxd-toast') and contains(@class, 'oxd-toast--success')]
+${SUCCESSFULLY_CREATED_TOAST_MESSAGE_XPATH}    //p[@class='oxd-text oxd-text--p oxd-text--toast-message oxd-toast-content-text']
 
 
 

@@ -1,5 +1,5 @@
 *** Variables ***
-${LOGIN_TEXT}                                     xpath=//h5[@class='oxd-text oxd-text--h5 orangehrm-login-title']
+${LOGIN_TEXT}                                     xpath=//h5[text()='Login']
 ${LogUSERNAME}                                    //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input
 ${LogPASSWORD}                                    xpath=//input[@name='password']
 ${LogLOGIN_BUTTON}                                //*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button

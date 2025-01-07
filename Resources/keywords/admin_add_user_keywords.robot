@@ -51,6 +51,5 @@ Salvar o cadastro
     SeleniumLibrary.Click Button        ${ADD_SAVE_XPATH}
 
 Validar se Cadastro foi satisfatorio
-
-    SeleniumLibrary.Wait Until Element Is Visible           ${SUCCESSFULLY_SAVED_XPATH}
-    SeleniumLibrary.Element Should Be Visible               ${SUCCESSFULLY_SAVED_XPATH}
+    Wait Until Element Is Visible       ${SUCCESSFULLY_CREATED_TOAST_XPATH}
+    Element Text Should Be              ${SUCCESSFULLY_CREATED_TOAST_MESSAGE_XPATH}   Successfully Saved
