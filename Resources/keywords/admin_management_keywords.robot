@@ -45,7 +45,7 @@ Clicar no botão Search
 Clicar no botão +Add
     SeleniumLibrary.Click Button    ${ADMIN_ADD_USER_XPATH}
 
-Validr Filtro
+Validar Filtro
      SeleniumLibrary.Wait Until Element Is Visible           ${RECORD_FOUND_XPATH}
      SeleniumLibrary.Element Should Be Visible               ${RECORD_FOUND_XPATH}
      ${texto_resultado}=    Get Text        ${RECORD_FOUND_XPATH}

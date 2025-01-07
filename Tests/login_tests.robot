@@ -10,7 +10,6 @@ Resource    ../Resources/keywords/admin_add_user_keywords.robot   # Referência 
 *** Test Cases ***
 Realizar Login.
 
-    [Documentation]    Cenário: Usuário faz login com sucesso.
     Given Acessar a tela de login
     When Inserir credenciais válidas
     Then verificar Login Bem-Sucedido
@@ -39,7 +38,7 @@ Buscar por Admin Cadastrado.
     When Pesquisar por Employee Name
     When Pesquisar por Status Enabled
     When Clicar no botão Search
-    When Validr Filtro
+    When Validar Filtro
     Then Validar Username & Employee Name
 
 
@@ -51,7 +50,7 @@ Deletar Admin Cadastrado.
     When Pesquisar por Employee Name
     When Pesquisar por Status Enabled
     When Clicar no botão Search
-    When Validr Filtro
+    When Validar Filtro
     When Validar Username & Employee Name
     When Deletar User Cadastrado
     When Confirmar Delete
