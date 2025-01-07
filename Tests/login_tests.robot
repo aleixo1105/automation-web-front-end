@@ -9,10 +9,10 @@ Resource    ../Resources/keywords/admin_add_user_keywords.robot   # Referência 
 
 *** Test Cases ***
 Realizar Login.
-
     Given Acessar a tela de login
     When Inserir credenciais válidas
     Then verificar Login Bem-Sucedido
+
 
 Cadastro do novo Admin e validar se houve sucesso.
     Given Gerar Fakers
@@ -55,3 +55,10 @@ Deletar Admin Cadastrado.
     When Deletar User Cadastrado
     When Confirmar Delete
     Then Validar Notificação Após Exclusão de Usuário
+
+
+Fazer Logout.
+    Given Acessar a tela de login
+    When Inserir credenciais válidas
+    When verificar Login Bem-Sucedido
+    Then Fazer logout

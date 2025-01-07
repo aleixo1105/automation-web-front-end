@@ -14,9 +14,9 @@ Gerar Fakers
 
 
     # Armazenar os dados nas variáveis globais
-    Set Suite Variable    ${USERNAME}            ${nome}
-    Set Suite Variable    ${PASSWORD}       ${senha}
-    Set Suite Variable    ${FIRST_CARACTER}      ${letra}
+    Set Suite Variable                  ${USERNAME}            ${nome}
+    Set Suite Variable                  ${PASSWORD}            ${senha}
+    Set Suite Variable                  ${FIRST_CARACTER}      ${letra}
 
 Acessar a tela de login
     Open BROWSER                                        ${URL}    ${BROWSER}
@@ -24,8 +24,8 @@ Acessar a tela de login
     SeleniumLibrary.Wait Until Page Contains Element    ${LOGIN_TEXT}
 
 Inserir credenciais válidas
-    SeleniumLibrary.Wait Until Page Contains Element    ${LogUSERNAME}
-    SeleniumLibrary.Input Text    ${LogUSERNAME}   ${ADMIN_USERNAME}
-    SeleniumLibrary.Input Text    ${LogPASSWORD}   ${ADMIN_PASSWORD}
-    SeleniumLibrary.Click Button                        ${LogLOGIN_BUTTON}
+    SeleniumLibrary.Wait Until Page Contains Element     ${LogUSERNAME}
+    SeleniumLibrary.Input Text          ${LogUSERNAME}   ${ADMIN_USERNAME}
+    SeleniumLibrary.Input Text          ${LogPASSWORD}   ${ADMIN_PASSWORD}
+    SeleniumLibrary.Click Button        ${LogLOGIN_BUTTON}
 
